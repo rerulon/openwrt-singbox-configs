@@ -1,0 +1,43 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun1",
+      "inet4_address": "172.19.0.1/30",
+      "auto_route": false,
+      "strict_route": false,
+      "sniff": true,
+      "sniff_override_destination": true
+    }
+  ],
+  "outbounds": [
+   {
+      "type": "vless",
+      "server": "111.111.111.111",
+      "server_port": 443,
+      "uuid": "g2FrL3Vr-L4Bg-A2B9-cWDS-xzlveCt3WSub", 
+      "flow": "xtls-rprx-vision",
+      "tls": {
+        "enabled": true,
+        "insecure": false,
+        "server_name": "yahoo.com",
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        },
+        "reality": {
+          "enabled": true,
+          "public_key": "9XM7DuB8olI9HQdj4ZJmdZ92Sh24UNtlA1rdG4KUPmX",
+          "short_id": "xf0qeOPzKvNlAmyP"
+        }
+      }
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true
+  }
+}

@@ -1,0 +1,7 @@
+config interface 'sing_box'
+	option proto 'none'
+	option device 'tun1'
+	option defaultroute '0'
+	option delegate '0'
+	list dns '127.0.0.1'
+

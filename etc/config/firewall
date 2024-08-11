@@ -1,0 +1,15 @@
+config zone
+	option name 'sing_box'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option forward 'ACCEPT'
+	option masq '1'
+	option mtu_fix '1'
+	list device 'tun1'
+	option family 'ipv4'
+	
+config forwarding
+	option name 'lan-tun'
+	option dest 'sing_box'
+	option src 'lan'
+	option family 'ipv4'

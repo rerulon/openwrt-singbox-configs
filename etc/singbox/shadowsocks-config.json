@@ -1,0 +1,32 @@
+{
+  "log": {
+    "level": "warn"
+  },
+  "inbounds": [
+    {
+      "type": "tun",
+      "tag": "tun-in",
+      "interface_name": "tun1",
+      "inet4_address": "172.19.0.1/30",
+      "auto_route": false,
+      "strict_route": false,
+      "sniff": true,
+      "sniff_override_destination": true
+    }
+  ],
+  "outbounds": [
+    {
+      "type": "shadowsocks",
+      "server": "111.111.111.111",
+      "server_port": 8080,
+      "method": "2022-blake3-aes-128-gcm",
+      "password": "1RIKC3Avm48wdPCcOWSc5x==",
+      "multiplex": {
+        "enabled": true
+      }
+    }
+  ],
+  "route": {
+    "auto_detect_interface": true
+  }
+}
